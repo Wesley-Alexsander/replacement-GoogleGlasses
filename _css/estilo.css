@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap');
+
+/*=============== Variables from Glass ===================*/
+:root {
+  --header-height: 3rem;
+  --bg-light-color: #101111;
+  --Body-Color: #1d1e1f;
+  --Text-color: #4D4D4D;
+  --Title-Color: #aaa6a2;
+  --light-color: #ddd8d2;
+  --color-white: #fff;
+  --color-main: rgb(0, 255, 191);
+  --secondary-color: rgb(4, 61, 110);
+  --black-color: rgb(15, 15, 15);
+  --gap: 3rem;
+
+}
+
+/*=============== Reset my document ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--Body-Color);
+}
+
+p {
+  color: var(--Title-Color);
+  text-align: justify;
+  font-family: 1.8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--Text-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+span {
+  color: var(--color-main);
+}
+/*=================== Main Class ==================*/
+
+.main{
+  overflow: hidden;
+  
+  /*has no scroll bar and can cut content*/
+}
+
+.section {
+  padding: 2rem 0 2rem;
+  /* 
+  padding section: 
+    4rem = top
+    0rem = Sides
+    2rem = Botton  
+  */
+}
+
+.container {
+  max-width: 100%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  /*margin: "L" and "R" = 24px*/
+  
+}
+
+.grid {
+  display: grid;
+}
+
+
+/*=================== Header =======================*/
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: transparent;
+
+}
+
+.scroll-header {
+  box-shadow: var(--color-main) 0px 0.3px 0.2px;
+  background-color: var(--Body-Color);
+}
+
+/*==================== Navigation Menu ====================*/
+
+.nav {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 2rem;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  /*these properties are applicable to up to 767 pixels*/
+ .nav-menu {
+  position: fixed;
+  background-color: var(--Body-Color);
+  top: -100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 2rem 0 3rem;
+  transition: .4s;
+  box-shadow: var(--color-main) 0px 0.3px 0.2px;
+ }
+}
+
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.nav-link {
+  font-family: 'Montserrat', sans-serif;  
+  color: var(--Text-color);
+}
+
+/*================= Toggles Menu ================*/
+.toggle {
+  font-size: 1.2rem;
+  color: var(--Title-Color);
+  cursor: pointer;
+  display: visible;
+  position: relative;
+  top: 0;
+}
+
+.close{
+  position: absolute;
+  font-size: 1.5rem;
+  top: -2rem;
+  right: 1.35rem;
+  cursor: pointer;
+  color: var(--Title-Color);
+}
+
+
+.show-menu {
+  top: 2.6rem;
+  transition: .5s;
+}
+
+.remove-toggle {
+  display: none;
+  transition: .5s;
+  position: relative;
+  top: 30%;
+}
+
+/*================ Initial Content =================*/
+
+.first-section-image {
+  max-width: 180%;
+  position: relative;
+  top: 0;
+  right: 8rem;
+
+}
+
+.initial-content {
+  position: relative;
+  top: -0.5rem;
+  background-color: var(--bg-light-color);
+  padding: 2rem 1.5rem 1rem;
+  
+}
+
+.initial-content-title {
+  color: var(--light-color);
+  font-size: 2.5rem;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  margin-bottom: 1rem;
+}
+
+.initial-content-paragraph {
+  color: var(--light-color);
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.initial-content-span {
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+}
+
+.date-content {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-main);
+  font-size: .8rem;
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.content-image {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/*======================= Especs Table ========================*/
+
+.table, .table th {
+  border-collapse: collapse;
+  border-radius: 10px 10px 0px 0px;
+  
+}
+
+.table caption {
+  text-align: left;
+  font-size: .8rem;
+  color: var(--light-color);
+  font-family: 'Montserrat';
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: .2rem;
+}
+
+.table-date {
+  display: block;
+  float: right;
+  text-align: right;
+}
+
+.table th {
+  background-color:rgb(2, 126, 116);
+  font-family: 'Montserrat';
+  padding: 1rem .5rem;
+}
+
+.table td {
+  padding: .1rem .5rem;
+}
+
+.table td {
+  border: 1px solid var(--bg-light-color);
+  
+}
+
+.table-title {
+  text-align: center;
+  font-family: 'Montserrat';
+  background-color:rgb(160, 228, 240);
+}
+
+.table-content {
+  background-color:rgb(207, 252, 248);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.table .table-border-bottom {
+ height: .7rem;
+ border: none;
+ border-radius: 0px 0px 10px 10px;
+ background-color: rgb(2, 126, 116);
+}
+
+/*========================== Videos ========================*/
+
+
+@media screen and (min-width: 767px) {
+ 
+
+ /*============== Navigation ==========*/
+ .nav {
+   height: calc(var(--header-height) + 1rem);
+   margin: 0 3rem;
+ }
+
+ .menu-list {
+  flex-direction: row;
+  column-gap: 1.5rem;
+  }
+  
+  .toggle, .close {
+    display: none;
+  }
+}
+
