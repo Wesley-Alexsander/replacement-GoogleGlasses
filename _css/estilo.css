@@ -279,11 +279,56 @@ span {
 
 /*========================== Videos ========================*/
 
-iframe {
-  width: 100%; 
-  height: 315px; 
+.filme01 {
+  margin-top: 2rem;
 }
 
+/*========================== Aside ========================*/
+.aside {
+  margin-top: 1rem;
+}
+
+.aside-border-Top {
+  width: 100%;
+  height: 20px;
+  border-bottom: 40px solid var(--bg-light-color);
+  border-left: 40px solid transparent;
+}
+
+.aside-border-bottom {
+  width: 100%;
+  height: 20px;
+  border-top: 40px solid var(--bg-light-color);
+  border-right: 40px solid transparent;
+
+}
+
+.aside-container {
+  background-color: var(--bg-light-color);
+  padding: 2rem;
+}
+
+.filme-aside {
+  margin-bottom: 2rem;
+}
+
+.aside-title {
+ 
+  text-shadow: 1px 1px 1.5px var(--light-color);
+}
+
+.aside-subtitle {
+  color: var(--bg-light-color);
+  background-color: var(--Text-color);
+  padding: .5rem;
+  font-size: 1.5rem;
+  font-family: 'Montserrat';
+  
+}
+
+
+
+/*===================== Media Query ==========================*/
 @media screen and (min-width: 767px) {
  
 
